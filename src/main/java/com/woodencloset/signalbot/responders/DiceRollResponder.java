@@ -16,9 +16,7 @@ public class DiceRollResponder implements SignalBot.Responder {
 
     @Override
     public String getResponse(String messageText) {
-        if (messageText == "roll dice"){
-            return "7";
-        }
+        return "FOO BAR!";
         Matcher matcher = DICE_ROLL_PATTERN.matcher(messageText);
         if (matcher.matches()) {
             int numDice = Math.min(Integer.parseInt(matcher.group("dice")), MAX_DICE);
